@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Generate a random string using openssl
+RANDOM_STRING=$(openssl rand -hex 8)
+
+# Echo the random string into index.txt
+echo "$RANDOM_STRING" > index.txt
+
+# Add and commit the change
+git add index.txt
+git commit -m "Add random string: $RANDOM_STRING" 
